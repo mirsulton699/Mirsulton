@@ -1,90 +1,120 @@
 const canvas = document.getElementById("snow");
-
 const ctx = canvas.getContext("2d");
 
 
-canvas.width = innerWidth;
-canvas.height = innerHeight;
+function resize(){
 
-
-let snow=[];
-
-
-for(let i=0;i<200;i++){
-
-snow.push({
-
-x:Math.random()*canvas.width,
-
-y:Math.random()*canvas.height,
-
-size:Math.random()*4+1,
-
-speed:Math.random()*2+1
-
-});
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
 }
+
+resize();
+
+
+window.addEventListener("resize", resize);
+
+
+
+let snowflakes = [];
+
+
+
+for(let i = 0; i < 180; i++){
+
+    snowflakes.push({
+
+        x: Math.random() * canvas.width,
+
+        y: Math.random() * canvas.height,
+
+        radius: Math.random() * 3 + 1,
+
+        speed: Math.random() * 2 + 0.5,
+
+        wind: Math.random() * 1 - 0.5
+
+    });
+
+}
+
 
 
 
 function drawSnow(){
 
 
-ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
 
 
 
-ctx.fillStyle="white";
-
-
-snow.forEach(s=>{
-
-
-ctx.beginPath();
-
-ctx.arc(
-s.x,
-s.y,
-s.size,
-0,
-Math.PI*2
-);
-
-ctx.fill();
+    ctx.fillStyle = "white";
 
 
 
-s.y += s.speed;
+    snowflakes.forEach((snow)=>{
+
+
+        ctx.beginPath();
+
+
+        ctx.arc(
+            snow.x,
+            snow.y,
+            snow.radius,
+            0,
+            Math.PI * 2
+        );
+
+
+        ctx.fill();
 
 
 
-if(s.y>canvas.height){
+        snow.y += snow.speed;
 
-s.y=0;
+        snow.x += snow.wind;
 
-s.x=Math.random()*canvas.width;
+
+
+        if(snow.y > canvas.height){
+
+            snow.y = -5;
+
+            snow.x = Math.random() * canvas.width;
+
+        }
+
+
+        if(snow.x > canvas.width){
+
+            snow.x = 0;
+
+        }
+
+
+        if(snow.x < 0){
+
+            snow.x = canvas.width;
+
+        }
+
+
+
+    });
+
+
+
+    requestAnimationFrame(drawSnow);
+
 
 }
 
-
-});
-
-
-requestAnimationFrame(drawSnow);
-
-
-}
 
 
 drawSnow();
-
-
-
-window.onresize=()=>{
-
-canvas.width=innerWidth;
-
-canvas.height=innerHeight;
-
-}
