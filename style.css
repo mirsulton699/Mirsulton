@@ -1,211 +1,35 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+/* AI CHAT PREMIUM */
 
-
-body{
-
-    min-height:100vh;
-
-    background:
-    linear-gradient(135deg,#0f172a,#1d4ed8,#020617);
-
-    color:white;
-
-}
-
-
-
-/* HEADER */
-
-.glass-header{
-
-    width:90%;
-
-    margin:20px auto;
-
-    padding:15px 25px;
-
-
+#chat{
     display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-
-    background:rgba(255,255,255,0.12);
-
-    border:1px solid rgba(255,255,255,0.25);
-
-    border-radius:30px;
-
-
-    backdrop-filter:blur(20px);
-
-}
-
-
-
-.logo{
-
-    font-size:25px;
-
-    font-weight:bold;
-
-}
-
-
-
-nav{
-
-    display:flex;
-
+    flex-direction:column;
     gap:15px;
-
+    margin:20px 0;
 }
 
 
-nav a{
+#userInput{
 
-    color:white;
+    width:80%;
 
-    text-decoration:none;
+    padding:15px 20px;
 
-    padding:8px 15px;
+    border:none;
 
-    border-radius:20px;
-
-    transition:.3s;
-
-}
-
-
-nav a:hover{
-
-    background:rgba(255,255,255,0.2);
-
-}
-
-
-
-
-/* MAIN */
-
-.hero{
-
-    width:90%;
-
-    margin:20px auto;
-
-    text-align:center;
-
-}
-
-
-
-.glass-box{
-
-    padding:30px;
-
-    margin-bottom:30px;
-
-
-    background:rgba(255,255,255,0.12);
-
-    border:1px solid rgba(255,255,255,0.25);
+    outline:none;
 
     border-radius:30px;
 
+    background:rgba(255,255,255,0.15);
 
-    backdrop-filter:blur(20px);
+    color:white;
 
-}
-
-
-
-.glass-box h1{
-
-    font-size:38px;
-
-    margin-bottom:10px;
+    font-size:16px;
 
 }
 
 
-
-
-/* CARDS */
-
-.cards{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:20px;
-
-}
-
-
-
-.card{
-
-    width:220px;
-
-    padding:25px;
-
-
-    background:rgba(255,255,255,0.12);
-
-    border:1px solid rgba(255,255,255,0.25);
-
-    border-radius:25px;
-
-
-    backdrop-filter:blur(20px);
-
-
-    transition:.3s;
-
-}
-
-
-
-.card:hover{
-
-    transform:translateY(-10px);
-
-    background:rgba(255,255,255,0.22);
-
-}
-
-
-
-.icon{
-
-    font-size:45px;
-
-    margin-bottom:15px;
-
-}
-
-
-
-.card h2{
-
-    margin-bottom:10px;
-
-}
-
-
-
-.card p{
+#userInput::placeholder{
 
     color:#ddd;
 
@@ -213,26 +37,27 @@ nav a:hover{
 
 
 
+button{
 
-@media(max-width:700px){
+    margin-top:15px;
 
+    padding:12px 30px;
 
-.glass-header{
+    border:none;
 
-    flex-direction:column;
+    border-radius:30px;
 
-    gap:15px;
+    cursor:pointer;
 
-}
+    font-size:16px;
 
-
-nav{
-
-    flex-wrap:wrap;
-
-    justify-content:center;
+    font-weight:bold;
 
 }
 
+
+button:hover{
+
+    transform:scale(1.05);
 
 }
