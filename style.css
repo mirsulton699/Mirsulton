@@ -1,35 +1,211 @@
-/* AI CHAT PREMIUM */
-
-#chat{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    margin:20px 0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
 
-#userInput{
+body{
 
-    width:80%;
+    min-height:100vh;
 
-    padding:15px 20px;
-
-    border:none;
-
-    outline:none;
-
-    border-radius:30px;
-
-    background:rgba(255,255,255,0.15);
+    background:
+    linear-gradient(135deg,#0f172a,#1d4ed8,#020617);
 
     color:white;
 
-    font-size:16px;
+}
+
+
+
+/* HEADER */
+
+.glass-header{
+
+    width:90%;
+
+    margin:20px auto;
+
+    padding:15px 25px;
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:30px;
+
+
+    backdrop-filter:blur(20px);
 
 }
 
 
-#userInput::placeholder{
+
+.logo{
+
+    font-size:25px;
+
+    font-weight:bold;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    background:rgba(255,255,255,0.2);
+
+}
+
+
+
+
+/* MAIN */
+
+.hero{
+
+    width:90%;
+
+    margin:20px auto;
+
+    text-align:center;
+
+}
+
+
+
+.glass-box{
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:30px;
+
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+
+.glass-box h1{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+/* CARDS */
+
+.cards{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+
+
+.card{
+
+    width:220px;
+
+    padding:25px;
+
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:25px;
+
+
+    backdrop-filter:blur(20px);
+
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,0.22);
+
+}
+
+
+
+.icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card h2{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.card p{
 
     color:#ddd;
 
@@ -37,27 +213,26 @@
 
 
 
-button{
 
-    margin-top:15px;
+@media(max-width:700px){
 
-    padding:12px 30px;
 
-    border:none;
+.glass-header{
 
-    border-radius:30px;
+    flex-direction:column;
 
-    cursor:pointer;
-
-    font-size:16px;
-
-    font-weight:bold;
+    gap:15px;
 
 }
 
 
-button:hover{
+nav{
 
-    transform:scale(1.05);
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
 
 }
