@@ -1,34 +1,238 @@
-/* INDEX POSITION FIX */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(135deg,#0f172a,#1d4ed8,#020617);
+
+    color:white;
+
+}
+
+
+
+/* HEADER */
 
 .glass-header{
-    margin:10px auto;
-    padding:12px 20px;
-    position:relative;
+
+    width:90%;
+
+    margin:20px auto;
+
+    padding:15px 25px;
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:30px;
+
+
+    backdrop-filter:blur(20px);
+
 }
 
+
+
+.logo{
+
+    font-size:25px;
+
+    font-weight:bold;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    background:rgba(255,255,255,0.2);
+
+}
+
+
+
+
+/* MAIN */
 
 .hero{
+
     width:90%;
-    margin:0 auto;
-    padding:0;
+
+    margin:20px auto;
+
+    text-align:center;
+
 }
+
 
 
 .glass-box{
-    padding:20px;
-    margin-top:10px;
-    margin-bottom:20px;
+
+    padding:30px;
+
+    margin-bottom:30px;
+
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:30px;
+
+
+    backdrop-filter:blur(20px);
+
 }
 
+
+
+.glass-box h1{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+/* CARDS */
 
 .cards{
-    margin-top:15px;
-    gap:15px;
+
+    display:flex;
+
     justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
 }
+
 
 
 .card{
-    width:210px;
-    padding:18px;
+
+    width:220px;
+
+    padding:25px;
+
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:25px;
+
+
+    backdrop-filter:blur(20px);
+
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,0.22);
+
+}
+
+
+
+.icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card h2{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.card p{
+
+    color:#ddd;
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+.glass-header{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
 }
