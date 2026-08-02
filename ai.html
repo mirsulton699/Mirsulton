@@ -1,97 +1,33 @@
-<!DOCTYPE html>
-<html lang="uz">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Infinity AI - Mirsulton</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
+<div class="ai-container">
 
 
-<body>
-
-
-<canvas id="snow"></canvas>
-
-
-
-<header class="glass-header">
-
-<div class="logo">
+<div class="ai-title">
 ♾️ Infinity AI
 </div>
 
 
-<nav>
 
-<a href="index.html">🏠 Home</a>
-<a href="football.html">⚽ Football</a>
-<a href="game.html">🎮 Game</a>
-<a href="news.html">📰 News</a>
-
-</nav>
-
-</header>
-
-
-
-
-
-<section class="hero">
-
-
-
-<div class="glass-box">
-
-
-<h1>
-♾️ Infinity AI
-</h1>
-
-
-<p>
-Your personal smart assistant
-</p>
-
-
-</div>
-
-
-
-
-
-
-<div class="chat-box">
-
-
+<div class="chat-area" id="messages">
 
 <div class="ai-message">
 
-🤖 Infinity AI:
-<br>
-Salom! Men sizning aqlli yordamchingizman.
+🤖 Salom! Men Infinity AI.
 Savolingizni yozing.
 
 </div>
 
 
-
-<div id="messages"></div>
-
+</div>
 
 
 
-<div class="input-area">
+
+<div class="write-area">
 
 
 <input 
 id="input"
-placeholder="Savolingizni yozing..."
+placeholder="Infinity AI ga savol yozing..."
 >
 
 
@@ -103,94 +39,4 @@ placeholder="Savolingizni yozing..."
 </div>
 
 
-
 </div>
-
-
-
-</section>
-
-
-
-
-
-
-<script src="script.js"></script>
-
-
-<script>
-
-
-function send(){
-
-
-let input=document.getElementById("input");
-
-let messages=document.getElementById("messages");
-
-
-if(input.value.trim()=="") return;
-
-
-
-messages.innerHTML += `
-
-<div class="user-message">
-
-👤 ${input.value}
-
-</div>
-
-`;
-
-
-
-setTimeout(()=>{
-
-
-messages.innerHTML += `
-
-<div class="ai-message">
-
-🤖 Infinity AI:
-<br>
-Savolingiz qabul qilindi. 
-Haqiqiy AI API ulanmoqda...
-
-</div>
-
-`;
-
-
-},700);
-
-
-
-input.value="";
-
-
-}
-
-
-
-document.getElementById("input")
-.addEventListener("keydown",function(e){
-
-
-if(e.key==="Enter"){
-
-send();
-
-}
-
-
-});
-
-
-</script>
-
-
-
-</body>
-
-</html>
