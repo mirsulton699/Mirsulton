@@ -10,9 +10,28 @@ body{
 
     min-height:100vh;
 
-    background:linear-gradient(135deg,#1b2735,#30475e,#111);
+    background:linear-gradient(135deg,#101820,#243b55,#141e30);
 
     color:white;
+
+}
+
+
+/* QOR */
+
+#snow{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:1;
 
 }
 
@@ -21,11 +40,18 @@ body{
 
 .glass-header{
 
+    position:fixed;
+
+    top:15px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
     width:90%;
 
-    margin:20px auto;
+    z-index:10;
 
-    padding:18px 30px;
 
     display:flex;
 
@@ -34,11 +60,15 @@ body{
     align-items:center;
 
 
+    padding:15px 25px;
+
+
     background:rgba(255,255,255,0.12);
 
     border:1px solid rgba(255,255,255,0.25);
 
     border-radius:25px;
+
 
     backdrop-filter:blur(20px);
 
@@ -48,7 +78,7 @@ body{
 
 .logo{
 
-    font-size:25px;
+    font-size:24px;
 
     font-weight:bold;
 
@@ -60,7 +90,9 @@ nav{
 
     display:flex;
 
-    gap:15px;
+    gap:12px;
+
+    align-items:center;
 
 }
 
@@ -72,7 +104,7 @@ nav a{
 
     text-decoration:none;
 
-    padding:10px 15px;
+    padding:8px 14px;
 
     border-radius:20px;
 
@@ -90,17 +122,21 @@ nav a:hover{
 
 
 
-/* ASOSIY */
+/* ASOSIY QISM */
 
 .hero{
+
+    position:relative;
+
+    z-index:2;
 
     width:90%;
 
     margin:auto;
 
-    text-align:center;
+    padding-top:120px;
 
-    padding:40px 0;
+    text-align:center;
 
 }
 
@@ -108,18 +144,28 @@ nav a:hover{
 
 .glass-box{
 
+    padding:25px;
+
+    margin-bottom:30px;
+
 
     background:rgba(255,255,255,0.12);
 
     border:1px solid rgba(255,255,255,0.25);
 
-    backdrop-filter:blur(20px);
-
     border-radius:30px;
 
-    padding:30px;
+    backdrop-filter:blur(20px);
 
-    margin-bottom:35px;
+}
+
+
+
+.glass-box h1{
+
+    font-size:35px;
+
+    margin-bottom:10px;
 
 }
 
@@ -127,14 +173,13 @@ nav a:hover{
 
 /* KARTALAR */
 
-
 .cards{
 
     display:flex;
 
     justify-content:center;
 
-    gap:25px;
+    gap:20px;
 
     flex-wrap:wrap;
 
@@ -144,17 +189,14 @@ nav a:hover{
 
 .card{
 
+    width:230px;
 
-    width:250px;
-
-    padding:25px;
+    padding:20px;
 
 
     background:rgba(255,255,255,0.12);
 
-
     border:1px solid rgba(255,255,255,0.25);
-
 
     border-radius:25px;
 
@@ -164,7 +206,6 @@ nav a:hover{
 
     transition:.3s;
 
-
 }
 
 
@@ -173,7 +214,7 @@ nav a:hover{
 
     transform:translateY(-8px);
 
-    background:rgba(255,255,255,0.22);
+    background:rgba(255,255,255,0.2);
 
 }
 
@@ -181,7 +222,7 @@ nav a:hover{
 
 .icon{
 
-    font-size:45px;
+    font-size:40px;
 
     margin-bottom:15px;
 
@@ -191,7 +232,9 @@ nav a:hover{
 
 .card h2{
 
-    font-size:22px;
+    font-size:21px;
+
+    margin-bottom:10px;
 
 }
 
@@ -199,176 +242,9 @@ nav a:hover{
 
 .card p{
 
-    margin-top:10px;
-
     color:#ddd;
 
-}
-
-
-
-/* AI CHAT */
-
-
-.ai-container{
-
-
-    width:75%;
-
-    height:550px;
-
-    margin:30px auto;
-
-
-    background:rgba(255,255,255,0.12);
-
-    border:1px solid rgba(255,255,255,0.25);
-
-    border-radius:35px;
-
-
-    backdrop-filter:blur(20px);
-
-
-    padding:25px;
-
-
-    display:flex;
-
-    flex-direction:column;
-
-
-}
-
-
-
-.chat-area{
-
-    flex:1;
-
-    overflow:auto;
-
-}
-
-
-
-.ai-message,
-.user-message{
-
-
-    max-width:70%;
-
-    padding:15px;
-
-    margin:15px;
-
-    border-radius:20px;
-
-    background:rgba(255,255,255,0.15);
-
-}
-
-
-
-.user-message{
-
-    margin-left:auto;
-
-}
-
-
-
-.write-area{
-
-    display:flex;
-
-    gap:10px;
-
-}
-
-
-
-.write-area input{
-
-
-    flex:1;
-
-    padding:15px;
-
-    border-radius:25px;
-
-    border:none;
-
-}
-
-
-
-.write-area button{
-
-
-    width:55px;
-
-    border-radius:50%;
-
-    border:none;
-
-    cursor:pointer;
-
-}
-
-
-
-/* PROFILE */
-
-
-.profile-box{
-
-
-    width:70%;
-
-    margin:auto;
-
-    padding:35px;
-
-
-    background:rgba(255,255,255,0.12);
-
-
-    border:1px solid rgba(255,255,255,0.25);
-
-
-    border-radius:35px;
-
-
-    backdrop-filter:blur(20px);
-
-}
-
-
-
-.avatar{
-
-    width:110px;
-
-    height:110px;
-
-    margin:auto;
-
-
-    border-radius:50%;
-
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-
-    background:rgba(255,255,255,0.2);
-
-
-    font-size:60px;
+    font-size:14px;
 
 }
 
@@ -376,17 +252,54 @@ nav a:hover{
 
 /* BUTTON */
 
-
 button{
 
+    margin-top:15px;
 
-    padding:12px 25px;
-
-    border-radius:25px;
+    padding:10px 20px;
 
     border:none;
 
+    border-radius:20px;
+
     cursor:pointer;
+
+    background:white;
+
+    color:#111;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* AI OYNA */
+
+.ai-container{
+
+    width:80%;
+
+    height:550px;
+
+    margin:auto;
+
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(20px);
 
 }
 
@@ -406,7 +319,6 @@ button{
 }
 
 
-
 nav{
 
     flex-wrap:wrap;
@@ -416,18 +328,9 @@ nav{
 }
 
 
+.hero{
 
-.ai-container{
-
-    width:95%;
-
-}
-
-
-
-.profile-box{
-
-    width:95%;
+    padding-top:170px;
 
 }
 
@@ -437,6 +340,5 @@ nav{
     width:90%;
 
 }
-
 
 }
