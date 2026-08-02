@@ -2,10 +2,11 @@
 <html lang="uz">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MirsultonAI</title>
+<title>MirsultonAI Chat</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,20 +15,17 @@
 
 <body>
 
-<canvas id="snow"></canvas>
-
 
 <header class="glass-header">
 
 <div class="logo">
-♾️ MirsultonAI
+🤖 Infinity AI
 </div>
 
 
 <nav>
 <a href="index.html">Home</a>
 <a href="football.html">⚽ Football</a>
-<a href="ai.html">🤖 AI</a>
 <a href="game.html">🎮 Game</a>
 <a href="news.html">📰 News</a>
 </nav>
@@ -43,76 +41,55 @@
 <div class="glass-box">
 
 <h1>
-Welcome to MirsultonAI
+🤖 Infinity AI Assistant
 </h1>
 
 <p>
-AI • Football • Games • News
+Ask anything
 </p>
 
 </div>
 
 
 
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="icon">🤖</div>
-
-<h2>Infinity AI</h2>
-
-<p>Smart assistant</p>
-
-</div>
+<div class="glass-box">
 
 
+<div id="chat">
 
 <div class="card">
 
-<div class="icon">⚽</div>
+<p>
+Salom 👋 Men Infinity AI
+</p>
 
-<h2>Football</h2>
-
-<p>Football world</p>
+</div>
 
 </div>
 
 
 
-<div class="card">
-
-<div class="icon">🎮</div>
-
-<h2>Game</h2>
-
-<p>Gaming zone</p>
-
-</div>
+<input 
+id="userInput"
+type="text"
+placeholder="Savolingizni yozing..."
+>
 
 
-
-<div class="card">
-
-<div class="icon">📰</div>
-
-<h2>News</h2>
-
-<p>Latest updates</p>
-
-</div>
+<button onclick="sendMessage()">
+Send
+</button>
 
 
 </div>
+
 
 
 </section>
 
 
 
-<script src="script.js"></script>
+<script src="ai.js"></script>
 
 
 </body>
