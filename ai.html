@@ -1,36 +1,75 @@
-<div class="cards">
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Infinity AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
 
 
-<div class="card">
+<body>
+
+
+<header class="glass-header">
+
+<div class="logo">
+🤖 Infinity AI
+</div>
+
+
+<nav>
+<a href="index.html">Home</a>
+<a href="football.html">⚽ Football</a>
+<a href="game.html">🎮 Game</a>
+<a href="news.html">📰 News</a>
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+
+
+<div class="glass-box">
 
 <div class="icon">
 🤖
 </div>
 
-<h2>
+<h1>
 Infinity AI Bot
-</h2>
+</h1>
 
 <p>
-Smart assistant powered by AI
+Your smart digital assistant
 </p>
 
 </div>
 
 
 
+
+<div class="cards">
+
+
 <div class="card">
 
-<div class="icon">
-🧠
-</div>
+<div class="icon">🧠</div>
 
 <h2>
 Smart Brain
 </h2>
 
 <p>
-Answers and ideas
+AI thinking system
 </p>
 
 </div>
@@ -39,19 +78,85 @@ Answers and ideas
 
 <div class="card">
 
-<div class="icon">
-⚡
-</div>
+<div class="icon">⚡</div>
 
 <h2>
-Fast Response
+Fast Reply
 </h2>
 
 <p>
-Quick AI replies
+Quick answers
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">🌐</div>
+
+<h2>
+Knowledge
+</h2>
+
+<p>
+Information assistant
 </p>
 
 </div>
 
 
 </div>
+
+
+
+
+<div class="glass-box">
+
+
+<div id="chat">
+
+<div class="card">
+
+<p>
+🤖 Salom! Men Infinity AI.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="chat-input">
+
+
+<input 
+id="userInput"
+placeholder="Savolingizni yozing..."
+>
+
+
+<button onclick="sendMessage()">
+Send
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+<script src="ai.js"></script>
+
+
+</body>
+
+</html>
