@@ -1,214 +1,34 @@
-/* MirsultonAI Premium Style */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-
-body{
-
-    min-height:100vh;
-
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-
-    color:white;
-
-}
-
-
-/* SNOW */
-
-#snow{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    z-index:0;
-
-}
-
-
-/* MENU */
+/* INDEX POSITION FIX */
 
 .glass-header{
-
-    position:relative;
-
-    z-index:2;
-
-    width:90%;
-
-    margin:15px auto;
-
+    margin:10px auto;
     padding:12px 20px;
-
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-
-    background:rgba(255,255,255,0.15);
-
-    border:1px solid rgba(255,255,255,0.25);
-
-    border-radius:25px;
-
-    backdrop-filter:blur(15px);
-
+    position:relative;
 }
 
-
-.logo{
-
-    font-size:24px;
-
-    font-weight:bold;
-
-}
-
-
-
-nav{
-
-    display:flex;
-
-    gap:10px;
-
-}
-
-
-nav a{
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:7px 12px;
-
-    border-radius:20px;
-
-}
-
-
-
-
-/* MAIN */
 
 .hero{
-
-    position:relative;
-
-    z-index:2;
-
     width:90%;
-
     margin:0 auto;
-
-    padding-top:10px;
-
-    text-align:center;
-
+    padding:0;
 }
-
 
 
 .glass-box{
-
     padding:20px;
-
+    margin-top:10px;
     margin-bottom:20px;
-
-
-    background:rgba(255,255,255,0.15);
-
-    border-radius:25px;
-
-    border:1px solid rgba(255,255,255,0.25);
-
-    backdrop-filter:blur(15px);
-
 }
 
-
-
-.glass-box h1{
-
-    font-size:32px;
-
-    margin-bottom:8px;
-
-}
-
-
-
-
-/* CARDS */
 
 .cards{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
+    margin-top:15px;
     gap:15px;
-
+    justify-content:center;
 }
-
 
 
 .card{
-
     width:210px;
-
     padding:18px;
-
-
-    background:rgba(255,255,255,0.15);
-
-    border:1px solid rgba(255,255,255,0.25);
-
-    border-radius:22px;
-
-
-    backdrop-filter:blur(15px);
-
-}
-
-
-
-.icon{
-
-    font-size:35px;
-
-    margin-bottom:10px;
-
-}
-
-
-.card h2{
-
-    font-size:20px;
-
-    margin-bottom:5px;
-
-}
-
-
-.card p{
-
-    color:#ddd;
-
 }
