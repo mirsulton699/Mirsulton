@@ -1,29 +1,32 @@
-// MirsultonAI Animation + Snow Effect
+// MirsultonAI Snow + Animation
+
 
 const canvas = document.getElementById("snow");
+
 
 if(canvas){
 
 const ctx = canvas.getContext("2d");
 
-let width = canvas.width = window.innerWidth;
-let height = canvas.height = window.innerHeight;
+
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
 
 
-let snowflakes = [];
+let snow = [];
 
 
 for(let i = 0; i < 120; i++){
 
-    snowflakes.push({
+    snow.push({
 
-        x: Math.random()*width,
+        x: Math.random() * w,
 
-        y: Math.random()*height,
+        y: Math.random() * h,
 
-        radius: Math.random()*3+1,
+        size: Math.random() * 3 + 1,
 
-        speed: Math.random()*2+1
+        speed: Math.random() * 2 + 1
 
     });
 
@@ -31,60 +34,64 @@ for(let i = 0; i < 120; i++){
 
 
 
-function snow(){
-
-    ctx.clearRect(0,0,width,height);
+function drawSnow(){
 
 
-    ctx.fillStyle="white";
+ctx.clearRect(0,0,w,h);
 
 
-    snowflakes.forEach(s=>{
+ctx.fillStyle = "white";
 
 
-        ctx.beginPath();
-
-        ctx.arc(
-            s.x,
-            s.y,
-            s.radius,
-            0,
-            Math.PI*2
-        );
-
-        ctx.fill();
+snow.forEach(s=>{
 
 
+ctx.beginPath();
 
-        s.y += s.speed;
+ctx.arc(
+s.x,
+s.y,
+s.size,
+0,
+Math.PI * 2
+);
 
-
-        if(s.y > height){
-
-            s.y = -5;
-
-            s.x = Math.random()*width;
-
-        }
-
-
-    });
+ctx.fill();
 
 
-    requestAnimationFrame(snow);
+
+s.y += s.speed;
+
+
+if(s.y > h){
+
+s.y = -5;
+
+s.x = Math.random()*w;
 
 }
 
 
-snow();
+});
+
+
+
+requestAnimationFrame(drawSnow);
+
+
+}
+
+
+
+drawSnow();
 
 
 
 window.addEventListener("resize",()=>{
 
-width = canvas.width = window.innerWidth;
+w = canvas.width = window.innerWidth;
 
-height = canvas.height = window.innerHeight;
+h = canvas.height = window.innerHeight;
 
 });
 
@@ -93,7 +100,9 @@ height = canvas.height = window.innerHeight;
 
 
 
-// Card animation
+
+// Cards animation
+
 
 const cards = document.querySelectorAll(".card");
 
@@ -101,25 +110,24 @@ const cards = document.querySelectorAll(".card");
 cards.forEach((card,index)=>{
 
 
-card.style.opacity="0";
+card.style.opacity = "0";
 
-card.style.transform="translateY(30px)";
+card.style.transform = "translateY(40px)";
 
 
 setTimeout(()=>{
 
 
-card.style.transition="0.6s";
+card.style.transition = "0.7s ease";
 
 
-card.style.opacity="1";
+card.style.opacity = "1";
 
 
-card.style.transform="translateY(0)";
+card.style.transform = "translateY(0)";
 
 
-},index*200);
-
+}, index * 200);
 
 
 });
