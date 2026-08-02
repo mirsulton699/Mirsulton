@@ -1,21 +1,13 @@
-// ===============================
-// MirsultonAI Final Script
-// Snow Effect + Animations
-// ===============================
-
-
-// ❄️ SNOW EFFECT
+// MirsultonAI Animation + Snow Effect
 
 const canvas = document.getElementById("snow");
-
 
 if(canvas){
 
 const ctx = canvas.getContext("2d");
 
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
 
 
 let snowflakes = [];
@@ -23,17 +15,17 @@ let snowflakes = [];
 
 for(let i = 0; i < 120; i++){
 
-snowflakes.push({
+    snowflakes.push({
 
-x: Math.random() * canvas.width,
+        x: Math.random()*width,
 
-y: Math.random() * canvas.height,
+        y: Math.random()*height,
 
-size: Math.random() * 4 + 1,
+        radius: Math.random()*3+1,
 
-speed: Math.random() * 2 + 1
+        speed: Math.random()*2+1
 
-});
+    });
 
 }
 
@@ -41,51 +33,45 @@ speed: Math.random() * 2 + 1
 
 function snow(){
 
-ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.clearRect(0,0,width,height);
 
 
-ctx.fillStyle="white";
-
-ctx.beginPath();
+    ctx.fillStyle="white";
 
 
-
-snowflakes.forEach(flake=>{
-
-
-ctx.moveTo(flake.x,flake.y);
-
-ctx.arc(
-flake.x,
-flake.y,
-flake.size,
-0,
-Math.PI*2
-);
+    snowflakes.forEach(s=>{
 
 
+        ctx.beginPath();
 
-flake.y += flake.speed;
+        ctx.arc(
+            s.x,
+            s.y,
+            s.radius,
+            0,
+            Math.PI*2
+        );
+
+        ctx.fill();
 
 
 
-if(flake.y > canvas.height){
-
-flake.y = -5;
-
-flake.x = Math.random()*canvas.width;
-
-}
+        s.y += s.speed;
 
 
-});
+        if(s.y > height){
+
+            s.y = -5;
+
+            s.x = Math.random()*width;
+
+        }
 
 
-ctx.fill();
+    });
 
 
-requestAnimationFrame(snow);
-
+    requestAnimationFrame(snow);
 
 }
 
@@ -96,9 +82,9 @@ snow();
 
 window.addEventListener("resize",()=>{
 
-canvas.width = window.innerWidth;
+width = canvas.width = window.innerWidth;
 
-canvas.height = window.innerHeight;
+height = canvas.height = window.innerHeight;
 
 });
 
@@ -107,10 +93,7 @@ canvas.height = window.innerHeight;
 
 
 
-// ===============================
-// CARD ANIMATION
-// ===============================
-
+// Card animation
 
 const cards = document.querySelectorAll(".card");
 
@@ -120,8 +103,7 @@ cards.forEach((card,index)=>{
 
 card.style.opacity="0";
 
-card.style.transform="translateY(40px)";
-
+card.style.transform="translateY(30px)";
 
 
 setTimeout(()=>{
@@ -129,112 +111,14 @@ setTimeout(()=>{
 
 card.style.transition="0.6s";
 
+
 card.style.opacity="1";
+
 
 card.style.transform="translateY(0)";
 
 
-
-},index*150);
-
-
-
-});
-
-
-
-
-// ===============================
-// GLASS BOX ANIMATION
-// ===============================
-
-
-const boxes = document.querySelectorAll(".glass-box");
-
-
-boxes.forEach(box=>{
-
-
-box.addEventListener("mouseenter",()=>{
-
-
-box.style.transform="scale(1.03)";
-
-
-});
-
-
-
-box.addEventListener("mouseleave",()=>{
-
-
-box.style.transform="scale(1)";
-
-
-});
-
-
-});
-
-
-
-
-// ===============================
-// BUTTON EFFECT
-// ===============================
-
-
-const buttons = document.querySelectorAll("button");
-
-
-buttons.forEach(btn=>{
-
-
-btn.addEventListener("click",()=>{
-
-
-btn.style.transform="scale(0.9)";
-
-
-setTimeout(()=>{
-
-
-btn.style.transform="scale(1)";
-
-
-},150);
-
-
-
-});
-
-
-});
-
-
-
-
-// ===============================
-// PAGE LOAD EFFECT
-// ===============================
-
-
-window.addEventListener("load",()=>{
-
-
-document.body.style.opacity="0";
-
-
-setTimeout(()=>{
-
-
-document.body.style.transition="1s";
-
-
-document.body.style.opacity="1";
-
-
-},100);
+},index*200);
 
 
 
